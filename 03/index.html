@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<title>Ejercicio 03</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+	<script src="../_assets/js/jquery-3.3.1.min.js"></script>
 <body>
 
 	<nav class="navbar">
@@ -21,6 +22,17 @@
 			<li><a href="#">link 9</a></li>
 		</ul>
 	</nav>
+	
+	<script>
+		$("ul li:nth-child(4)").append('<ul><li><a href="#">link 4.a</a></li></ul>');
+
+		$("ul li:nth-child(4)").before('<li><a href="#">link 3.5</a></li>');
+
+		$("ul li:nth-child(6)").prepend("<img src='https://2.bp.blogspot.com/-FDr6LjIAX-I/Vkye26IS1CI/AAAAAAAASXI/beOewvFZLsY/s400/Emojis%2BOculos%2BEscuros.gif'>")
+			.after("<img src='https://assets-cdn.github.com/images/icons/emoji/unicode/1f642.png'>");
+		$("img").css('width', '3em');
+
+	</script>
 
 </body>
 </html>
