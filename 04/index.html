@@ -4,10 +4,29 @@
   <meta charset="utf-8">
 	<title>Ejercicio 04</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="../_assets/js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
   <button class="add_name">+</button>
   <ul class="names"></ul>
+
+  <script>
+  	// agrega cuandro de dialogo //
+  	$(".add_name").on('click', function(event){
+  		var data = prompt('por favor agrega un nombre a la lista', 'Harry Potter');
+  	// agrega span que guarda información ingresada en el prompt //
+  		$(".names").append('<li><span>'+ data +'</span> <a class="remove_name" href="#">X</a></li>');
+  	});
+  	// agrega función que escuche el click del botón remove_name y seleccionará el li en cuestión para luego borrarlo //
+  	$(".names").on('click', '.remove_name', function(event){
+  		$(this).parent().remove();
+  	});
+  	// agrega función prevención de eventos a todos los links vacíos  para que cuando le hagamos click no aparezca en la URL el signo '#'  //
+  	$(".names").on("click", "a[href='#']", function(event){
+  		event.preventDefault();
+  	});
+  	
+  </script>
 
 </body>
 </html>
