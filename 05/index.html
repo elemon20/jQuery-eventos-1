@@ -9,6 +9,8 @@
     integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
     crossorigin="anonymous">
   <link rel="stylesheet" href="../_assets/css/style.css">
+  <script src="../_assets/js/jquery-3.3.1.min.js"></script>
+
 </head>
 <body>
   <ul class="meals">
@@ -93,6 +95,23 @@
       </a>
     </li>
   </ul>
+
+  <script>
+
+   $( ".social" ).on('click', function( event ) {
+     event.preventDefault();
+     event.stopPropagation();
+   });
+
+
+   $(".social__like").on('click', function (){
+      $(this).toggleClass("social__like--clicked");
+    });
+
+    $(".social__link").on('click', function (event){
+      alert($("img").attr('alt'));
+    })
+  </script>
 
 </body>
 </html>
